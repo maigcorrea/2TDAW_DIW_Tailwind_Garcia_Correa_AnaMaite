@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+          --font-body: "Poppins";
+          --color-clear: rgba(255, 255, 255, 0.3);
+          --color-neo: rgba(201,201,201);
+        }
+
+        .sombra{
+          box-shadow:  -21px -9px 75px 0px rgb(255, 255, 255), inset 5px 0px 10px 0px rgba(0, 0, 0, 0.4), inset 10px 0 25px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .sombraCajas{
+          box-shadow:  -21px -9px 75px 0px rgb(255, 255, 255), inset 5px 0px 10px 0px rgba(0, 0, 0, 0.4), 10px 0 25px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .sombraMenu{
+          box-shadow: 10px 0 25px 1px rgba(0, 0, 0, 0.5);
+        }
+
+    </style>
+</head>
+<body class="font-body">
+    <header>
+        <nav class="bg-clear backdrop-blur-lg p-4 flex justify-between items-center fixed top-0 w-full z-20 sombraMenu">
+            <h1 class="text-xl">Logo Gameboy</h1>
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                &#9776;
+            </button>
+            <ul id="menu" class="hidden md:flex space-x-4">
+                <li><a href="#" class="hover:underline">Diseño</a></li>
+                <li><a href="#" class="hover:underline">Especificaciones</a></li>
+                <li><a href="#" class="hover:underline">Productos</a></li>
+                <li><a href="#" class="hover:underline">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div id="mobile-menu" class="fixed top-0 left-0 w-64 h-full bg-white transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-20">
+            <button id="close-btn" class="p-4">&times;</button>
+            <ul class="p-4 space-y-4">
+                <li><a href="#" class="block hover:underline">Diseño</a></li>
+                <li><a href="#" class="block hover:underline">Especificaciones</a></li>
+                <li><a href="#" class="block hover:underline">Productos</a></li>
+                <li><a href="#" class="block hover:underline">Contacto</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <main>
+        <section id="heroBanner" class="mt-[105px]">
+            <div class="text-center">
+                <h1 class="text-7xl font-medium">Mi Watch</h1>
+                <p class="text-3xl">Seis mejoras para un estilo deportivo digno de emular</p>
+            </div>
+            <div class="bg-[url(./img/relojPortada.png)] bg-cover bg-center lg:bg-contain bg-no-repeat h-[30vh] md:h-[60vh] lg:h-[100vh]">
+            </div>
+        </section>
+
+        <section id="relojes" class="">
+            <div class="bg-[url(./img/fondo5.jpg)] bg-center md:bg-[url(./img/bgRelojes.jpg)] bg-cover lg:bg-contain bg-no-repeat w-full h-[60vh] lg:h-[100vh] flex items-center py-[50px]">
+                <div class="container px-5 md:px-0 md:w-[30%] md:ml-[150px] text-center md:text-left mx-auto ">
+                    <h2 class="lg:text-7xl font-medium mb-[50px]">Diseño ligero de 32 g* Estilizado y ligero</h2>
+                    <p class="lg:text-3xl">Ligero como una barra labial, gracias a su nueva estructura exclusiva*
+                        Libere su energía y disfrute más de sus entrenamientos.</p>
+                    <a href="#" class="inline-block lg:text-xl p-[15px] bg-indigo-700 rounded-full mt-5 hover:bg-indigo-500 text-white">Saber más</a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section id="curiosidades" class="my-3 mx-3 py-32 bg-gray-300 rounded-[50px] sombra">
+            <div class="container m-auto">
+              <h2 class="mb-14 p-3 text-4xl font-medium lg:text-7xl">Especificaciones</h2>
+              <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div class="rounded-lg h-[300px] mx-5 md:mx-0 lg:h-full p-10 md:p-[100px] md:col-span-2 lg:col-span-2 lg:row-span-2 bg-[url(./img/chip.jpg)] bg-center bg-cover sombraCajas">
+                  <!-- <div class="flex h- md:h-full flex-col justify-between gap-14 "> -->
+                    <!-- <p class="pt-8 text-2xl font-medium lg:pt-14 lg:text-4xl">Una Game Boy sobrevivió a una explosión en la Guerra del Golfo y aún funciona (se exhibe en el Museo de Nintendo en Nueva York).</p>
+                    <div class="text-sm">
+                      <a href="#" class="p-4 bg-green-200 rounded-xl hover:bg-green-300">Saber más</a>
+                    </div> -->
+                  <!-- </div> -->
+                </div>
+                <div class="rounded-lg bg-gray-100 p-10 mx-5 md:mx-0 sombraCajas">
+                  <div class="flex flex-col gap-34">
+                    <p class="text-lg font-medium">Batería de larga duración de 16 días
+                        La mayor duración de la batería aporta tranquilidad a sus desplazamientos.Las actualizaciones globales de algoritmos de IA de bajo consumo de energía amplían la duración de la batería del reloj. Cargue la batería al instante con el cable magnético de carga fácil.</p>
+                    <div class="text-sm flex items-end md:block md:h-full">
+                      <a href="#" class="p-4 bg-indigo-200 rounded-xl hover:bg-indigo-300">Saber más</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="rounded-lg bg-gray-100 p-10 mx-5 md:mx-0 sombraCajas">
+                  <div class="flex flex-col gap-14">
+                    <p class="text-lg font-medium">El chip GPS integrado de proceso de 12 nm Airoha de gama alta admite posicionamiento sincrónico a partir de los cuatro principales sistemas de posicionamiento: GPS, GLONASS, Galileo y BDS. Funciona con algoritmos de optimización de kilometraje personalizados para mejorar la precisión de los movimientos y el kilometraje, lo que hace que sus datos de actividad deportiva sean más precisos.
+                    </p>
+                    <div class="text-sm">
+                      <a href="#" class="p-4 bg-indigo-200 rounded-xl hover:bg-indigo-300">Saber más</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+          <section id="productos" class="flex flex-wrap justify-around gap-14 mx-5 lg:my-[100px]">
+            <div class="p-9 bg-zinc-200 lg:w-[20%] rounded-xl relative">
+                <a href="#"><img src="./img/beige.png" alt="" class="mx-auto"></a>
+                <a href="" class="text-xl font-medium bottom-[5px] absolute text-center left-1/2 translate-x-[-50%]">BEIGE</a>
+            </div>
+
+            <div class="p-9 bg-slate-300 lg:w-[20%] rounded-xl text-center relative">
+                <a href="#"><img src="./img/azul.png" alt="" class="mx-auto"></a>
+                <a href="" class="text-xl font-medium bottom-[5px] absolute left-1/2 translate-x-[-50%]">AZUL</a>
+            </div>
+
+            <div class="p-9 bg-gray-500 lg:w-[20%] rounded-xl text-center relative">
+                <a href="#"><img src="./img/black.png" alt="" class="mx-auto"></a>
+                <a href="" class="text-xl font-medium bottom-[5px] absolute left-1/2 translate-x-[-50%]">NEGRO</a>
+            </div>
+
+          </section>
+
+
+
+          <section id="formulario" class="flex flex-wrap justify-around items-center my-5">
+            <div class="container mx-5 md:mx-auto w-full mb-9 lg:mb-0 lg:w-[50%]">
+                <h2 class="text-4xl lg:text-5xl">Duda? Sugerencia? Contactanos!</h2>
+                <p class="text-xl mt-[25px] mb-[70px]">Contacta con nosotros a través de nuestro servicio de atención al cliente.</p>
+
+                <form action="#" method="post" class="flex flex-wrap">
+                    <label for="nombre" class="w-full">Nombre:</label>
+                    <input type="text" name="nombre" id="" class="w-full border">
+                    <label for="apellidos" class="w-full">Apellidos:</label>
+                    <input type="text" name="apellidos" id="" class="w-full border">
+                    <label for="mail" class="w-full">Email:</label>
+                    <input type="email" name="mail" id="" class="w-full border">
+
+                    <input type="submit" value="Enviar" class=" lg:text-xl p-[15px] bg-indigo-300 rounded-full mt-5 hover:bg-indigo-400 cursor-pointer">
+                </form>
+            </div>
+            <div class="container mx-auto w-full lg:w-[40%]">
+                <img src="./img/form.png" alt="">
+            </div>
+          </section>
+    </main>
+
+    <footer class="flex flex-col space-y-10 justify-center p-10 rounded-tr-[35px] rounded-tl-[35px] bg-gray-300">
+
+        <div class="flex justify-center flex-wrap gap-6 font-medium">
+            <a class="hover:text-gray-900 hover:underline hover:underline-offset-8" href="#">Diseño</a>
+            <a class="hover:text-gray-900 hover:underline hover:underline-offset-8" href="#">Especificaciones</a>
+            <a class="hover:text-gray-900 hover:underline hover:underline-offset-8" href="#">Productos</a>
+            <a class="hover:text-gray-900 hover:underline hover:underline-offset-8" href="#">Contacto</a>
+        </div>
+    
+        <div class="flex justify-center space-x-5">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
+            </a>
+        </div>
+        <p class="text-center font-medium">&copy; 2025 Gameboy. All rights reservered.</p>
+    </footer>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
